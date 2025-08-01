@@ -4,6 +4,24 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Eye } from "lucide-react";
 
+// Portfolio Images
+import brandIdentityImg from "@/assets/portfolio/brand-identity.jpg";
+import socialMediaImg from "@/assets/portfolio/social-media-design.jpg";
+import productCatalogImg from "@/assets/portfolio/product-catalog.jpg";
+import ecommerceImg from "@/assets/portfolio/ecommerce-website.jpg";
+import healthcareImg from "@/assets/portfolio/healthcare-system.jpg";
+import realEstateImg from "@/assets/portfolio/real-estate-platform.jpg";
+import microservicesImg from "@/assets/portfolio/microservices-banking.jpg";
+import iotPipelineImg from "@/assets/portfolio/iot-pipeline.jpg";
+import cdnArchitectureImg from "@/assets/portfolio/cdn-architecture.jpg";
+import chatSystemImg from "@/assets/portfolio/chat-system.jpg";
+import mlPipelineImg from "@/assets/portfolio/ml-pipeline.jpg";
+import blockchainImg from "@/assets/portfolio/blockchain-network.jpg";
+import videoStreamingImg from "@/assets/portfolio/video-streaming.jpg";
+import gamingBackendImg from "@/assets/portfolio/gaming-backend.jpg";
+import tradingSystemImg from "@/assets/portfolio/trading-system.jpg";
+import searchEngineImg from "@/assets/portfolio/search-engine.jpg";
+
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("all");
 
@@ -20,7 +38,7 @@ const Portfolio = () => {
       id: 1,
       title: "Brand Identity for Tech Startup",
       category: "graphic",
-      image: "/placeholder.svg",
+      image: brandIdentityImg,
       description: "Complete brand identity including logo, color palette, and marketing materials for a fintech startup.",
       technologies: ["Adobe Illustrator", "Photoshop", "InDesign"],
       link: "#",
@@ -30,7 +48,7 @@ const Portfolio = () => {
       id: 2,
       title: "Social Media Campaign Design",
       category: "graphic",
-      image: "/placeholder.svg",
+      image: socialMediaImg,
       description: "Creative social media graphics and campaign materials for a digital marketing agency.",
       technologies: ["Figma", "Adobe Creative Suite", "Canva"],
       link: "#",
@@ -40,7 +58,7 @@ const Portfolio = () => {
       id: 3,
       title: "E-commerce Product Catalog",
       category: "graphic",
-      image: "/placeholder.svg",
+      image: productCatalogImg,
       description: "Product photography and catalog design for an online fashion retailer.",
       technologies: ["Lightroom", "Photoshop", "InDesign"],
       link: "#",
@@ -52,7 +70,7 @@ const Portfolio = () => {
       id: 4,
       title: "E-commerce Platform",
       category: "web",
-      image: "/placeholder.svg",
+      image: ecommerceImg,
       description: "Full-featured e-commerce website with payment integration and inventory management.",
       technologies: ["React", "Node.js", "Stripe", "MongoDB"],
       link: "#",
@@ -62,7 +80,7 @@ const Portfolio = () => {
       id: 5,
       title: "Healthcare Management System",
       category: "web",
-      image: "/placeholder.svg",
+      image: healthcareImg,
       description: "Secure patient management system with appointment scheduling and medical records.",
       technologies: ["Vue.js", "Express", "PostgreSQL", "JWT"],
       link: "#",
@@ -72,7 +90,7 @@ const Portfolio = () => {
       id: 6,
       title: "Real Estate Platform",
       category: "web",
-      image: "/placeholder.svg",
+      image: realEstateImg,
       description: "Property listing platform with advanced search and virtual tour capabilities.",
       technologies: ["Next.js", "Prisma", "Supabase", "Tailwind"],
       link: "#",
@@ -84,7 +102,7 @@ const Portfolio = () => {
       id: 7,
       title: "Microservices Architecture for Banking",
       category: "system",
-      image: "/placeholder.svg",
+      image: microservicesImg,
       description: "Scalable microservices architecture for a digital banking platform with high availability.",
       technologies: ["Docker", "Kubernetes", "Redis", "PostgreSQL"],
       link: "#",
@@ -94,7 +112,7 @@ const Portfolio = () => {
       id: 8,
       title: "IoT Data Processing Pipeline",
       category: "system",
-      image: "/placeholder.svg",
+      image: iotPipelineImg,
       description: "Real-time data processing system for IoT sensors with analytics dashboard.",
       technologies: ["Apache Kafka", "Elasticsearch", "Docker", "Python"],
       link: "#",
@@ -104,7 +122,7 @@ const Portfolio = () => {
       id: 9,
       title: "Content Delivery Network",
       category: "system",
-      image: "/placeholder.svg",
+      image: cdnArchitectureImg,
       description: "Global CDN architecture with edge caching and load balancing for media streaming.",
       technologies: ["AWS CloudFront", "Redis", "Nginx", "Terraform"],
       link: "#",
@@ -114,7 +132,7 @@ const Portfolio = () => {
       id: 10,
       title: "Distributed Chat System",
       category: "system",
-      image: "/placeholder.svg",
+      image: chatSystemImg,
       description: "Scalable real-time messaging system supporting millions of concurrent users.",
       technologies: ["WebSockets", "Redis Cluster", "MongoDB", "Node.js"],
       link: "#",
@@ -124,7 +142,7 @@ const Portfolio = () => {
       id: 11,
       title: "Machine Learning Pipeline",
       category: "system",
-      image: "/placeholder.svg",
+      image: mlPipelineImg,
       description: "End-to-end ML pipeline for recommendation system with automated model training.",
       technologies: ["Apache Airflow", "TensorFlow", "Kubernetes", "Python"],
       link: "#",
@@ -134,7 +152,7 @@ const Portfolio = () => {
       id: 12,
       title: "Blockchain Network Architecture",
       category: "system",
-      image: "/placeholder.svg",
+      image: blockchainImg,
       description: "Private blockchain network design for supply chain transparency and tracking.",
       technologies: ["Hyperledger Fabric", "Docker", "Go", "CouchDB"],
       link: "#",
@@ -144,7 +162,7 @@ const Portfolio = () => {
       id: 13,
       title: "Video Streaming Platform",
       category: "system",
-      image: "/placeholder.svg",
+      image: videoStreamingImg,
       description: "Scalable video streaming architecture with adaptive bitrate and global distribution.",
       technologies: ["HLS", "DASH", "FFmpeg", "AWS S3", "CloudFront"],
       link: "#",
@@ -154,7 +172,7 @@ const Portfolio = () => {
       id: 14,
       title: "Gaming Backend Infrastructure",
       category: "system",
-      image: "/placeholder.svg",
+      image: gamingBackendImg,
       description: "High-performance gaming backend with real-time multiplayer support and anti-cheat.",
       technologies: ["WebRTC", "Redis", "PostgreSQL", "Docker Swarm"],
       link: "#",
@@ -164,7 +182,7 @@ const Portfolio = () => {
       id: 15,
       title: "Financial Trading System",
       category: "system",
-      image: "/placeholder.svg",
+      image: tradingSystemImg,
       description: "Low-latency trading system with risk management and regulatory compliance.",
       technologies: ["C++", "Apache Kafka", "TimescaleDB", "Redis"],
       link: "#",
@@ -174,7 +192,7 @@ const Portfolio = () => {
       id: 16,
       title: "Enterprise Search Engine",
       category: "system",
-      image: "/placeholder.svg",
+      image: searchEngineImg,
       description: "Distributed search engine for enterprise documents with AI-powered relevance.",
       technologies: ["Elasticsearch", "Apache Solr", "Python", "Docker"],
       link: "#",
