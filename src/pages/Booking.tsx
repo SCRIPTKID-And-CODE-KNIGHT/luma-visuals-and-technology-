@@ -48,22 +48,45 @@ const Booking = () => {
       return;
     }
 
-    // Here you would typically save to Supabase
-    toast({
-      title: "Booking Submitted Successfully!",
-      description: "We'll contact you within 24 hours to confirm your appointment.",
-    });
+    // Create FormData for FormSubmit
+    const form = new FormData();
+    form.append('name', formData.name);
+    form.append('email', formData.email);
+    form.append('phone', formData.phone);
+    form.append('service', formData.service);
+    form.append('date', format(date, 'PPP'));
+    form.append('time', formData.timeSlot);
+    form.append('message', formData.message);
+    form.append('_subject', 'New Booking Request - LUMA VISUALS AND TECHNOLOGY');
 
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      service: "",
-      timeSlot: "",
-      message: "",
-    });
-    setDate(undefined);
+    try {
+      await fetch('https://formsubmit.co/technociphernet@gmail.com', {
+        method: 'POST',
+        body: form
+      });
+
+      toast({
+        title: "Booking Submitted Successfully!",
+        description: "We'll contact you within 24 hours to confirm your appointment.",
+      });
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        timeSlot: "",
+        message: "",
+      });
+      setDate(undefined);
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to submit booking. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {

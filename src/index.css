@@ -8,34 +8,34 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Tech Brand Colors */
-    --background: 222 47% 3%;
-    --foreground: 210 20% 98%;
-    --surface: 222 47% 5%;
+    /* Light Mode - Tech Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --surface: 0 0% 98%;
     
     /* Electric Blue Palette */
-    --electric-blue: 200 100% 60%;
+    --electric-blue: 200 100% 50%;
     --electric-blue-dark: 200 100% 40%;
     --electric-blue-light: 200 100% 80%;
     
     /* Cyber Purple Palette */
-    --cyber-purple: 260 100% 70%;
+    --cyber-purple: 260 100% 60%;
     --cyber-purple-dark: 260 100% 50%;
     --cyber-purple-light: 260 100% 90%;
     
     /* Tech Green Accent */
-    --tech-green: 120 100% 60%;
+    --tech-green: 120 100% 50%;
     --tech-green-dark: 120 100% 40%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--electric-blue)), hsl(var(--cyber-purple)));
-    --gradient-surface: linear-gradient(145deg, hsl(var(--surface)), hsl(222 47% 7%));
-    --gradient-card: linear-gradient(145deg, hsl(222 47% 6%), hsl(222 47% 8%));
+    --gradient-surface: linear-gradient(145deg, hsl(var(--surface)), hsl(0 0% 96%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 99%), hsl(0 0% 97%));
     
     /* Shadows & Effects */
-    --shadow-neon: 0 0 20px hsl(var(--electric-blue) / 0.3);
-    --shadow-purple: 0 0 20px hsl(var(--cyber-purple) / 0.3);
-    --shadow-card: 0 8px 32px hsl(222 47% 1% / 0.5);
+    --shadow-neon: 0 0 20px hsl(var(--electric-blue) / 0.2);
+    --shadow-purple: 0 0 20px hsl(var(--cyber-purple) / 0.2);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.1);
     
     /* Animation & Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -49,40 +49,33 @@ All colors MUST be HSL.
     --popover-foreground: var(--foreground);
 
     --primary: var(--electric-blue);
-    --primary-foreground: 222 47% 3%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: var(--cyber-purple);
-    --secondary-foreground: var(--foreground);
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 222 47% 8%;
-    --muted-foreground: 210 20% 65%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 222 47% 45%;
 
     --accent: var(--tech-green);
-    --accent-foreground: 222 47% 3%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: var(--foreground);
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 222 47% 15%;
-    --input: 222 47% 8%;
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
     --ring: var(--electric-blue);
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
