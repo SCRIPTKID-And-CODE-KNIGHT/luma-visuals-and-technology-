@@ -52,8 +52,8 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center">
-          <p className="text-muted-foreground">
-            © 2024 LUMA VISUALS AND TECHNOLOGY. All rights reserved.
+          <p className="text-foreground">
+            © 2025 LUMA VISUALS AND TECHNOLOGY. All rights reserved.
           </p>
         </div>
       </div>
