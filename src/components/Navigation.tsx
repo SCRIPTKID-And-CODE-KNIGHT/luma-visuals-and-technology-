@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,13 +20,13 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <nav className="fixed top-0 w-full z-50 glass-morphism border-b border-border/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
-            <h1 className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              LUMA VISUALS AND TECHNOLOGY
+            <h1 className="text-xl font-bold text-tech-gradient hover:scale-105 transition-transform duration-300">
+              LM TECHNOLOGIES
             </h1>
           </Link>
 
@@ -64,24 +65,36 @@ const Navigation = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden animate-slide-up">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-surface border-b border-border">
-            {navItems.map((item) => (
-              <Link
+        <motion.div 
+          className="md:hidden"
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 glass-morphism border-b border-border/30">
+            {navItems.map((item, index) => (
+              <motion.div
                 key={item.name}
-                to={item.path}
-                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                  isActive(item.path)
-                    ? "text-electric-blue bg-background"
-                    : "text-foreground hover:text-electric-blue hover:bg-background"
-                }`}
-                onClick={() => setIsOpen(false)}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
               >
-                {item.name}
-              </Link>
+                <Link
+                  to={item.path}
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 hover-lift ${
+                    isActive(item.path)
+                      ? "text-electric-blue bg-electric-blue/10"
+                      : "text-foreground hover:text-electric-blue hover:bg-electric-blue/5"
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       )}
     </nav>
   );

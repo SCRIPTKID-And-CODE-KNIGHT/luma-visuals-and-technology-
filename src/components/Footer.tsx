@@ -7,11 +7,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-4">
-              LUMA VISUALS AND TECHNOLOGY
+            <h3 className="text-xl font-bold text-tech-gradient mb-4">
+              LM TECHNOLOGIES
             </h3>
             <p className="text-muted-foreground mb-4">
-              Professional graphic design, cybersecurity expertise, and innovative technology solutions.
+              Cutting-edge technology solutions, advanced cybersecurity, and innovative digital transformation services.
             </p>
           </div>
 
@@ -53,7 +53,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-foreground">
-            © 2025 LUMA VISUALS AND TECHNOLOGY. All rights reserved.
+            © 2025 LM TECHNOLOGIES. All rights reserved.
           </p>
         </div>
       </div>
